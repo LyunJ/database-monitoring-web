@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${title}"></title>
+</head>
+<body>
+    <form th:action="@{/connect}" th:object="${databaseLoginVO}" method="post">
+        <input th:field="${databaseLoginVO.host}" type="text" placeholder="host">
+        <input th:field="${databaseLoginVO.user}" type="text" placeholder="user">
+        <input th:field="${databaseLoginVO.password}" type="password" placeholder="password">
+        <button type="submit">Connect</button>
+    </form>
+</body>
+</html>
